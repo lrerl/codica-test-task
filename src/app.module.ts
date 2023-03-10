@@ -3,6 +3,10 @@ import {TypeOrmModule} from '@nestjs/typeorm';
 import {BankModule} from './bank/bank.module';
 import {ConfigModule} from "@nestjs/config";
 import { TransactionsModule } from './transactions/transactions.module';
+import { CategoryModule } from './category/category.module';
+import {Transaction} from "./transactions/transactions.entity";
+import {Bank} from "./bank/bank.entity";
+import {Category} from "./category/category.entity";
 
 @Module({
     imports: [
@@ -16,11 +20,12 @@ import { TransactionsModule } from './transactions/transactions.module';
             username: process.env.POSTGRES_USER,
             password: process.env.POSTGRES_PASSWORD,
             database: process.env.POSTGRES_DB,
-            synchronize: true,
-            autoLoadEntities: true,
+            entities: [Transaction, Bank, Category],
+            synchronize: true
         }),
         BankModule,
         TransactionsModule,
+        CategoryModule,
     ],
     controllers: [],
     providers: [],
