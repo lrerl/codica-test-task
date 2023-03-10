@@ -12,10 +12,10 @@
 
 ## Deploy
 ##### 1) From cmd
-  npm run start
+    npm run start
 
 ##### 2) From docker-compose
-  docker compose up
+    docker compose up
   
 ## API
 ##### Swagger docs - https://lrerl.github.io/codica-test-task/
