@@ -55,7 +55,7 @@ export class CategoryController {
         return this.categoryService.deleteCategory(dto);
     }
 
-    @ApiOperation({summary: 'Get all transactions from some period to some period with categories'})
+    @ApiOperation({summary: 'All changes in certain categories in the specified period of time'})
     @ApiResponse({status: 200, type: Category})
     @Get('/stats')
     async getStats(@Body() dto: CategoryStatsDto) {

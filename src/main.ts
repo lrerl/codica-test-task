@@ -11,7 +11,7 @@ async function bootstrap() {
     const config = new DocumentBuilder()
         .setTitle("Codica test task")
         .setDescription("Swagger docs")
-        .addTag('vasilyev.yaroslavv@gmail.com')
+        .setContact('', '', 'vasilyev.yaroslavv@gmail.com')
         .build()
 
     const document = SwaggerModule.createDocument(app, config);
